@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
+import { sendWelcomeEmail } from '@/lib/email';
 
 export async function POST(request: NextRequest) {
   try {
@@ -130,6 +131,14 @@ export async function POST(request: NextRequest) {
         },
         { status: 500 }
       );
+    }
+
+    // Send welcome email (non-blocking)
+    if (email) {
+      sendWelcomeEmail(email.trim()).catch(err => {
+        console.error('Welcome email failed:', err);
+        // Don't fail the API call if email fails
+      });
     }
 
     return NextResponse.json(

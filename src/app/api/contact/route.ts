@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
+import { sendContactNotification } from '@/lib/email';
 
 export async function POST(request: NextRequest) {
   try {
@@ -85,6 +86,17 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+
+    // Send email notification (non-blocking)
+    sendContactNotification({
+      name: name.trim(),
+      email: email.trim(),
+      phone: phone?.trim(),
+      message: message.trim(),
+    }).catch(err => {
+      console.error('Email notification failed:', err);
+      // Don't fail the API call if email fails
+    });
 
     return NextResponse.json(
       { 
