@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌱 Thinie Farm - Website Nhật Ký Trồng Rau
 
-## Getting Started
+Website ghi lại hành trình trồng rau sạch từ con số 0 - kết quả thật, không màu mè.
 
-First, run the development server:
+## 📖 Giới thiệu
 
-```bash
+Thinie Farm là dự án cá nhân về trồng rau sạch với mô hình hiện đại. Website này ghi lại toàn bộ quá trình từ gieo hạt đến thu hoạch, chia sẻ kinh nghiệm và kết quả thật.
+
+## �� Mục đích
+
+- ✅ Ghi lại nhật ký gieo trồng chi tiết
+- ✅ Chia sẻ kinh nghiệm cho người mới
+- ✅ Minh bạch quy trình và kết quả
+- ✅ Xây dựng niềm tin qua hành trình thật
+
+## 🏗️ Công nghệ sử dụng
+
+- **Framework:** Next.js 14+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Content:** MDX (Markdown + JSX)
+- **Deployment:** Vercel (recommended)
+
+## 🚀 Cài đặt và chạy
+
+### 1. Cài đặt dependencies
+
+\`\`\`bash
+npm install
+\`\`\`
+
+### 2. Chạy development server
+
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở [http://localhost:3000](http://localhost:3000) để xem kết quả.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Build cho production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+\`\`\`bash
+npm run build
+npm start
+\`\`\`
 
-## Learn More
+## 📁 Cấu trúc website
 
-To learn more about Next.js, take a look at the following resources:
+- **/** - Trang chủ (Hero, giới thiệu dự án, nhật ký mới nhất)
+- **/farm-diary** - Nhật ký gieo trồng (quan trọng nhất!)
+- **/weekly-harvest** - Sản phẩm rau theo tuần
+- **/guides** - Kinh nghiệm trồng rau
+- **/about** - Câu chuyện dự án
+- **/contact** - Liên hệ
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Cách thêm nhật ký mới
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Tạo file mới trong \`src/content/farm-diary/\`:
 
-## Deploy on Vercel
+\`\`\`mdx
+---
+title: "Lần X - Tên rau - Kết quả sau Y ngày"
+date: "2026-02-07"
+startDate: "2026-01-23"
+howToPlant: "Cách gieo hạt"
+howToWater: "Cách tưới nước"
+survivalRate: 75
+daysToHarvest: 15
+excerpt: "Mô tả ngắn gọn"
+images:
+  - "/images/farm-diary/image1.jpg"
+lessons:
+  - "Bài học 1"
+  - "Bài học 2"
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Nội dung nhật ký ở đây...
+\`\`\`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Features
+
+✅ Responsive design (mobile, tablet, desktop)
+✅ MDX support cho blog posts
+✅ Image optimization
+✅ SEO friendly
+✅ Fast performance với Next.js
+✅ TypeScript cho type safety
+
+## 📧 Liên hệ
+
+- **Email:** contact@thiniefarm.com
+- **Zalo:** 0123456789
+
+---
+
+**Made with ❤️ and 🌱 by Thinie Farm**
